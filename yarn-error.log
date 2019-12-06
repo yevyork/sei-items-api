@@ -1,0 +1,67 @@
+Arguments: 
+  /Users/andrepato/.nvm/versions/node/v12.7.0/bin/node /usr/local/Cellar/yarn/1.19.0/libexec/bin/yarn.js install
+
+PATH: 
+  /Users/andrepato/.rbenv/shims:/Users/andrepato/.nvm/versions/node/v12.7.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Users/andrepato/Library/Python/2.7/bin:/Users/andrepato/Documents/flutter/bin:/Users/andrepato/.rvm/bin
+
+Yarn version: 
+  1.19.0
+
+Node version: 
+  12.7.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: getaddrinfo ENOTFOUND registry.yarnpkg.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:60:26)
+
+npm manifest: 
+  {
+    "name": "express-api-unit-testing",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+      "test": "cross-env NODE_ENV=test jest --testTimeout=10000",
+      "pretest": "cross-env NODE_ENV=test npm run db:reset",
+      "db:create:test": "cross-env NODE_ENV=test npx sequelize-cli db:create",
+      "start": "nodemon server.js",
+      "db:reset": "npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://git.generalassemb.ly/bruno/express-api-unit-testing"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "body-parser": "^1.19.0",
+      "cors": "^2.8.5",
+      "express": "^4.17.1",
+      "morgan": "^1.9.1",
+      "pg": "^7.12.1",
+      "sequelize": "^5.18.4"
+    },
+    "devDependencies": {
+      "cross-env": "^5.2.1",
+      "jest": "^24.9.0",
+      "nodemon": "^1.19.2",
+      "sequelize-cli": "^5.5.1",
+      "supertest": "^4.0.2"
+    },
+    "jest": {
+      "testEnvironment": "node",
+      "coveragePathIgnorePatterns": [
+        "/node_modules/"
+      ]
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
